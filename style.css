@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+.container {
+  width: 550px;
+  max-width: 90%;
+  text-align: center;
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  font-size: 2.6rem;
+  margin-bottom: 35px;
+  font-weight: 700;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* 
+  1. THE GAME BUTTONS 
+  Strictly targeted. No style bleeding. 
+*/
+.game-btn {
+  width: 120px;
+  height: 120px;
+  border: none;
+  border-radius: 22px;
+  background: #334155;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  font-size: 50px;
+}
+
+.game-btn span {
+  margin-top: 8px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.game-btn:hover {
+  transform: translateY(-8px);
+  background: #6366f1;
+  box-shadow: 0 20px 35px rgba(99, 102, 241, 0.35);
+}
+
+.game-btn:active {
+  transform: scale(0.95);
+}
+
+/* 
+  2. TEXT & SCORE 
+  Added min-height to prevent UI jumping when text is empty 
+*/
+/* 
+  2. TEXT & SCORE 
+*/
+p {
+  width: 100%;
+}
+
+.js-result {
+  /* Margins stripped. Let the Flexbox gap do the work. */
+  font-size: 26px;
+  font-weight: 700;
+  color: #22c55e;
+  min-height: 36px; /* Tightened from 45px */
+}
+
+.js-moves {
+  /* Margins stripped. */
+  font-size: 18px;
+  color: #cbd5e1;
+  min-height: 24px; /* Tightened from 30px */
+}
+
+.js-score {
+  /* Margins stripped. */
+  padding: 15px;
+  border-radius: 15px;
+  background: #0f172a;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* 
+  3. THE RESET BUTTON 
+  Completely isolated logic. 
+*/
+.reset-btn {
+  width: 220px;
+  height: 55px;
+  /* Margins stripped. */
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  background: #ef4444; 
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  transform: translateY(0) scale(1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.reset-btn:hover {
+  background: #dc2626; 
+  transform: translateY(-4px); 
+  box-shadow: 0 15px 25px rgba(239, 68, 68, 0.4); 
+}
+
+.reset-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 5px 10px rgba(239, 68, 68, 0.3);
+}
+
+/* 
+  4. RESPONSIVE DESIGN 
+*/
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .game-btn {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+  }
+
+  .game-btn span {
+    font-size: 15px;
+  }
+
+  .js-result {
+    font-size: 24px;
+  }
+}
