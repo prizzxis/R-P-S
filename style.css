@@ -39,10 +39,6 @@ h1 {
   flex-wrap: wrap;
 }
 
-/* 
-  1. THE GAME BUTTONS 
-  Strictly targeted. No style bleeding. 
-*/
 .game-btn {
   width: 120px;
   height: 120px;
@@ -76,34 +72,25 @@ h1 {
   transform: scale(0.95);
 }
 
-/* 
-  2. TEXT & SCORE 
-  Added min-height to prevent UI jumping when text is empty 
-*/
-/* 
-  2. TEXT & SCORE 
-*/
 p {
   width: 100%;
 }
 
 .js-result {
-  /* Margins stripped. Let the Flexbox gap do the work. */
+ 
   font-size: 26px;
   font-weight: 700;
   color: #22c55e;
-  min-height: 36px; /* Tightened from 45px */
+  min-height: 36px; 
 }
 
 .js-moves {
-  /* Margins stripped. */
   font-size: 18px;
   color: #cbd5e1;
-  min-height: 24px; /* Tightened from 30px */
+  min-height: 24px; 
 }
 
 .js-score {
-  /* Margins stripped. */
   padding: 15px;
   border-radius: 15px;
   background: #0f172a;
@@ -111,10 +98,6 @@ p {
   font-weight: 600;
 }
 
-/* 
-  3. THE RESET BUTTON 
-  Completely isolated logic. 
-*/
 .reset-btn {
   width: 220px;
   height: 55px;
@@ -142,9 +125,6 @@ p {
   box-shadow: 0 5px 10px rgba(239, 68, 68, 0.3);
 }
 
-/* 
-  4. RESPONSIVE DESIGN 
-*/
 @media (max-width: 600px) {
   h1 {
     font-size: 2rem;
